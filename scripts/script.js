@@ -66,7 +66,8 @@ console.log(soupAcces);
 
 
 
-//تمرین ها
+
+
 
 //1
 
