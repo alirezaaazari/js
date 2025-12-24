@@ -44,3 +44,67 @@ alert(userName);
 console.log(users);
 
 console.log(newUsers);
+
+
+
+// IF with ternary and with the help of the map method. if the score is greater than 10, it will pass otherwise it will fail.
+
+const scores = [10, 18 , 6 , 20 , 14 , 9];
+const result = scores.map(score =>{
+    return score >= 10 ? "pass" : "failed"
+});
+
+console.log(result);
+
+
+// if & else without ternary
+
+const score = [10, 18 , 6 , 20 , 14 , 9];
+const results = score.map(scores =>{
+    if (scores >= 10) {
+        return "pass";
+    }else{
+        return "failed";
+    }
+});
+console.log(results);
+
+
+
+
+//map on  object.
+
+const user = {
+    name :"ali",
+    age :25,
+    city :"tehran"
+};
+
+const userResult = Object.entries(user).map(
+    ([k , v])=> `${k} : ${v}`
+);
+
+console.log(userResult);
+
+
+
+
+//map + show index
+
+const fruits = ["apple","banana","orange"];
+
+const fruitResult = fruits.map((item,index)=>`${index+1} - ${item}`);
+
+console.log(fruitResult);
+
+
+
+//again exercise for map & index
+
+const arrfruits = ["apple","banana","orange"];
+
+const fruitResults = arrfruits.map((item,index)=> `fruit ${index+1} : ${item}`);
+
+console.log(fruitResults);
+
+
