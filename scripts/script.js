@@ -1,3 +1,4 @@
+/*
 console.log("hello world");
 console.log(typeof "dave");
 console.log(typeof 42);
@@ -377,4 +378,4 @@ if (name) {
 } else {
   console.log("you didnt enter your name");
 }
-
+*/
