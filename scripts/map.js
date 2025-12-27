@@ -108,3 +108,61 @@ const fruitResults = arrfruits.map((item,index)=> `fruit ${index+1} : ${item}`);
 console.log(fruitResults);
 
 
+
+
+
+//more exercise for warm up and learn.they probably also have repetitive exercises.
+
+
+
+//doubling numbers
+//solution-1
+/*
+const numbers2 = [5,10,12,15,37,44];
+const doubleBergur = numbers2.map(num=>num*2);
+console.log(doubleBergur);
+*/
+
+//solution-2
+
+const numbers2 = [5,10,12,15,37,44];
+const doubleBergur = numbers2.map((i)=>{
+    return i*2
+});
+console.log(doubleBergur);
+
+
+
+
+//convert temperature to fahrenheit with formula:  F = C * 9/5 + 32
+
+const celsuis = [0,10,20,30];
+const fahrenheit = celsuis.map((f)=>{
+    return f*9/5+32
+})
+console.log(fahrenheit);
+
+
+
+//convert string to its length
+
+const words = ["js","react","next","typescript","frontend"];
+
+const stringToLenght = words.map((l)=>{
+    return l.length
+});
+console.log(stringToLenght);
+
+
+
+//enlarge letters
+
+const name2 = ["asal","ali","hamed","saeid"];
+const upercase = name2.map((u)=>{
+    return u.toUpperCase
+});
+
+console.log(upercase);
+
+
+
