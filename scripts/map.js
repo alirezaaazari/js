@@ -165,4 +165,3 @@ const upercase = name2.map((u)=>{
 console.log(upercase);
 
 
-
