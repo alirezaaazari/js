@@ -170,6 +170,314 @@ console.log(upercase);
 // ****
 
 
+
+
+
 //object methods
+
+
+//spread operator...
+
+const a = [1,2,3]
+const b = [...a];
+console.log(a);
+
+
+
+
+
+const c = [1,2];
+const d = [3,4];
+
+console.log(...c,...d);
+
+
+
+
+
+const numb = [1,2,3];
+const newNumb = [...numb,5]
+
+console.log(newNumb);
+
+
+
+
+
+const userT = {name:"asal",age:"22"};
+const newUserT = {
+  ...userT,
+  age:23,
+  Job:"frontEndDeveloper"
+}
+
+console.log(newUserT);
+
+
+
+
+
+const numbers3 = [1,2,3];
+function sum(a,b,c){
+  return a+b+c
+}
+
+sum(...numbers3);
+console.log(sum(...numbers3));
+
+
+
+
+
+//Object.entries()
+
+
+const car = {
+  brand: "BMW",
+  year: 2022,
+  color: "black"
+};
+
+for (const [key, value] of Object.entries(car)) {
+  console.log(`${key} => ${value}`);
+}
+
+
+
+
+
+
+
+const scoresس = {
+  math: 18,
+  physics: 15,
+  english: 20
+};
+
+Object.entries(scoresس).forEach(([key, value]) => {
+  if (value > 16) {
+    console.log(key);
+  }
+});
+
+
+
+
+
+
+
+
+const products = {
+  laptop: 50000,
+  phone: 30000,
+  tablet: 20000
+};
+
+const increasedPrices = Object.entries(products).map(
+  ([key, value]) => [key, value * 1.1]
+);
+
+console.log(increasedPrices);
+
+
+
+
+
+
+
+
+const userss = {
+  name: "Asal",
+  age: 22,
+  isAdmin: true
+};
+
+const queryString = Object.entries(userss)
+  .map(([key, value]) => `${key}=${value}`)
+  .join("&");
+
+console.log(queryString);
+
+
+
+
+
+
+//this is important 
+/*
+
+Object.entries(obj)
+  .forEach(([key, value]) => {})
+
+Object.entries(obj)
+  .map(([key, value]) => {})
+
+Object.entries(obj)
+  .filter(([key, value]) => {})
+
+*/
+
+
+
+
+
+
+
+
+
+
+//Object.keys()
+
+
+const carr = {
+  brand: "BMW",
+  year: 2023,
+  color: "black"
+};
+
+console.log(Object.keys(carr));
+
+
+
+
+
+
+const scoress = {
+  math: 18,
+  physics: 15,
+  english: 20
+};
+
+const count = Object.keys(scoress).length;
+console.log(count);
+
+
+
+
+
+
+const settings = {
+  darkMode: true,
+  notifications: false,
+  autoSave: true
+};
+
+const enabled = Object.keys(settings).filter(
+  key => settings[key] === true
+);
+
+console.log(enabled);
+
+
+
+
+
+
+
+
+
+//Object.values()
+
+
+const userr = {
+  name: "Asal",
+  age: 22,
+  isAdmin: false
+};
+
+console.log(Object.values(userr));
+
+
+
+
+
+
+
+const scoree = {
+  math: 18,
+  physics: 15,
+  english: 20
+};
+
+const values = Object.values(scoree);
+const avg = values.reduce((sum, val) => sum + val, 0) / values.length;
+
+console.log(avg);
+
+
+
+
+
+
+
+const permissions = {
+  read: true,
+  write: false,
+  delete: true
+};
+
+const hasPermission = Object.values(permissions).some(
+  value => value === true
+);
+
+console.log(hasPermission);
+
+
+//Object.fromEntries()
+
+
+const arr = [
+  ["a", 1],
+  ["b", 2],
+  ["c", 3]
+];
+
+const obj = Object.fromEntries(arr);
+console.log(obj);
+
+
+
+
+
+
+
+const userrs = {
+  name: "Asal",
+  age: 22,
+  isAdmin: false
+};
+
+const onlyStrings = Object.fromEntries(
+  Object.entries(userrs).filter(
+    ([_, value]) => typeof value === "string"
+  )
+);
+
+console.log(onlyStrings);
+
+
+
+
+
+
+
+
+const data = {
+  name: "Asal",
+  age: 22,
+  password: "123456",
+  token: "abcd"
+};
+
+const safeData = Object.fromEntries(
+  Object.entries(data).filter(
+    ([key]) => key !== "password" && key !== "token"
+  )
+);
+
+console.log(safeData);
+
+
+
 
 
